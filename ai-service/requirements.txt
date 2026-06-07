@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+pypdf
+scikit-learn
+numpy
+httpx

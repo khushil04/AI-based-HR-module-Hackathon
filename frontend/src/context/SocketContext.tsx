@@ -3,8 +3,9 @@ import type { ReactNode } from "react";
 import { io, Socket } from "socket.io-client";
 import { fetchNotificationsApi } from "../services/notificationApi";
 import { useAuth } from "./AuthContext";
+import { BACKEND_URL } from "../config/api";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL ?? "http://localhost:5000";
+const SOCKET_URL = BACKEND_URL;
 
 export interface AppNotification {
   id: string;

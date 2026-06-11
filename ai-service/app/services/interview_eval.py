@@ -13,7 +13,7 @@ def heuristic_evaluate(question: str, answer: str) -> dict:
     score = min(100, length_score * 0.4 + relevance + clarity)
     return {
         "score": round(score, 2),
-        "feedback": "Heuristic evaluation (connect OPENAI_API_KEY or GEMINI_API_KEY for deeper analysis).",
+        "feedback": "Heuristic evaluation based on answer length, key-term relevance, and clarity.",
         "strengths": ["Answer provided"] if answer.strip() else [],
         "improvements": ["Add more specific examples"] if len(words) < 30 else [],
     }

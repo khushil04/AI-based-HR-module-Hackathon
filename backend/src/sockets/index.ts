@@ -26,8 +26,9 @@ export const initSocket = (server: HttpServer): Server => {
     path: "/socket.io",
     cors: {
       origin: (origin, callback) => {
-        callback(null, isAllowedOrigin(origin));
+        callback(null, origin || true);
       },
+      methods: ["GET", "POST"],
       credentials: true,
     },
   });
